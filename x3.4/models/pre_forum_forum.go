@@ -50,3 +50,7 @@ type PreForumForum struct {
 	Disablethumb     int    `xorm:"not null default 0 TINYINT(1)"`
 	Disablecollect   int    `xorm:"not null default 0 TINYINT(1)"`
 }
+
+func (t *PreForumForum) TableName() string {
+	return "pre_forum_forum"
+}

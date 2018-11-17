@@ -12,3 +12,7 @@ type PreCommonMagiclog struct {
 	Idtype    string `xorm:"default 'NULL' CHAR(6)"`
 	Targetuid int    `xorm:"not null default 0 index(targetuid) MEDIUMINT(8)"`
 }
+
+func (t *PreCommonMagiclog) TableName() string {
+	return "pre_common_magiclog"
+}

@@ -9,3 +9,7 @@ type PreForumRatelog struct {
 	Score      int    `xorm:"not null default 0 SMALLINT(6)"`
 	Reason     string `xorm:"not null default '''' CHAR(40)"`
 }
+
+func (t *PreForumRatelog) TableName() string {
+	return "pre_forum_ratelog"
+}

@@ -9,3 +9,7 @@ type PreForumThreadrush struct {
 	Creditlimit   int    `xorm:"not null default -996 INT(10)"`
 	Replylimit    int    `xorm:"not null default 0 SMALLINT(6)"`
 }
+
+func (t *PreForumThreadrush) TableName() string {
+	return "pre_forum_threadrush"
+}

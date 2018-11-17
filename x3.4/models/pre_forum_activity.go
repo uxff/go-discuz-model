@@ -16,3 +16,7 @@ type PreForumActivity struct {
 	Ufield        string `xorm:"not null TEXT"`
 	Credit        int    `xorm:"not null default 0 SMALLINT(6)"`
 }
+
+func (t *PreForumActivity) TableName() string {
+	return "pre_forum_activity"
+}

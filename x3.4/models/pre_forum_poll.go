@@ -11,3 +11,7 @@ type PreForumPoll struct {
 	Pollpreview string `xorm:"not null default '''' VARCHAR(255)"`
 	Voters      int    `xorm:"not null default 0 MEDIUMINT(8)"`
 }
+
+func (t *PreForumPoll) TableName() string {
+	return "pre_forum_poll"
+}

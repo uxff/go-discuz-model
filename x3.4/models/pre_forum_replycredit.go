@@ -8,3 +8,7 @@ type PreForumReplycredit struct {
 	Membertimes    int `xorm:"not null default 0 SMALLINT(6)"`
 	Random         int `xorm:"not null default 0 TINYINT(1)"`
 }
+
+func (t *PreForumReplycredit) TableName() string {
+	return "pre_forum_replycredit"
+}

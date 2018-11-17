@@ -6,3 +6,7 @@ type PreForumPoststick struct {
 	Position int `xorm:"not null INT(10)"`
 	Dateline int `xorm:"not null index(dateline) INT(10)"`
 }
+
+func (t *PreForumPoststick) TableName() string {
+	return "pre_forum_poststick"
+}

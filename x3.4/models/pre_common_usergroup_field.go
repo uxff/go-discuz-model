@@ -112,3 +112,7 @@ type PreCommonUsergroupField struct {
 	Buildgroupcredits      int    `xorm:"not null default 0 SMALLINT(6)"`
 	Allowimgcontent        int    `xorm:"not null default 0 TINYINT(1)"`
 }
+
+func (t *PreCommonUsergroupField) TableName() string {
+	return "pre_common_usergroup_field"
+}

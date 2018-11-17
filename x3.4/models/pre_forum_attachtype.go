@@ -6,3 +6,7 @@ type PreForumAttachtype struct {
 	Extension string `xorm:"not null default '''' CHAR(12)"`
 	Maxsize   int    `xorm:"not null default 0 INT(10)"`
 }
+
+func (t *PreForumAttachtype) TableName() string {
+	return "pre_forum_attachtype"
+}

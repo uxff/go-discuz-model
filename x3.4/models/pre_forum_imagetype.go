@@ -8,3 +8,7 @@ type PreForumImagetype struct {
 	Displayorder int    `xorm:"not null default 0 TINYINT(3)"`
 	Directory    string `xorm:"not null CHAR(100)"`
 }
+
+func (t *PreForumImagetype) TableName() string {
+	return "pre_forum_imagetype"
+}

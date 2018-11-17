@@ -9,3 +9,7 @@ type PreForumDebatepost struct {
 	Voters   int    `xorm:"not null default 0 index(voters) MEDIUMINT(10)"`
 	Voterids string `xorm:"not null TEXT"`
 }
+
+func (t *PreForumDebatepost) TableName() string {
+	return "pre_forum_debatepost"
+}

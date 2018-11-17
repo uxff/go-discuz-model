@@ -7,3 +7,7 @@ type PreForumPollvoter struct {
 	Options  string `xorm:"not null TEXT"`
 	Dateline int    `xorm:"not null default 0 index(uid) INT(10)"`
 }
+
+func (t *PreForumPollvoter) TableName() string {
+	return "pre_forum_pollvoter"
+}

@@ -15,3 +15,7 @@ type PreCommonCreditLog struct {
 	Extcredits7 int    `xorm:"not null INT(10)"`
 	Extcredits8 int    `xorm:"not null INT(10)"`
 }
+
+func (t *PreCommonCreditLog) TableName() string {
+	return "pre_common_credit_log"
+}

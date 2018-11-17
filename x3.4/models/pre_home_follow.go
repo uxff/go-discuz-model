@@ -10,3 +10,7 @@ type PreHomeFollow struct {
 	Mutual    int    `xorm:"not null default 0 TINYINT(1)"`
 	Dateline  int    `xorm:"not null default 0 INT(10)"`
 }
+
+func (t *PreHomeFollow) TableName() string {
+	return "pre_home_follow"
+}

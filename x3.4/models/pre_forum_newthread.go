@@ -5,3 +5,7 @@ type PreForumNewthread struct {
 	Fid      int `xorm:"not null default 0 index MEDIUMINT(8)"`
 	Dateline int `xorm:"not null default 0 index INT(10)"`
 }
+
+func (t *PreForumNewthread) TableName() string {
+	return "pre_forum_newthread"
+}

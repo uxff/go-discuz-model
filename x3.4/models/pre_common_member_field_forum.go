@@ -12,3 +12,7 @@ type PreCommonMemberFieldForum struct {
 	Groups         string `xorm:"not null MEDIUMTEXT"`
 	Attentiongroup string `xorm:"not null default '''' VARCHAR(255)"`
 }
+
+func (t *PreCommonMemberFieldForum) TableName() string {
+	return "pre_common_member_field_forum"
+}

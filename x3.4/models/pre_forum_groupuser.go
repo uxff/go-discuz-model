@@ -11,3 +11,7 @@ type PreForumGroupuser struct {
 	Lastupdate   int    `xorm:"not null default 0 index(uid_lastupdate) index(userlist) INT(10)"`
 	Privacy      int    `xorm:"not null default 0 TINYINT(1)"`
 }
+
+func (t *PreForumGroupuser) TableName() string {
+	return "pre_forum_groupuser"
+}

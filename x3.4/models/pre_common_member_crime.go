@@ -9,3 +9,7 @@ type PreCommonMemberCrime struct {
 	Reason     string `xorm:"not null TEXT"`
 	Dateline   int    `xorm:"not null default 0 index(uid) INT(10)"`
 }
+
+func (t *PreCommonMemberCrime) TableName() string {
+	return "pre_common_member_crime"
+}

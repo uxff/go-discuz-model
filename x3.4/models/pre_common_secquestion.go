@@ -6,3 +6,7 @@ type PreCommonSecquestion struct {
 	Question string `xorm:"not null TEXT"`
 	Answer   string `xorm:"not null VARCHAR(255)"`
 }
+
+func (t *PreCommonSecquestion) TableName() string {
+	return "pre_common_secquestion"
+}

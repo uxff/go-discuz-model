@@ -10,3 +10,7 @@ type PreHomeSpecialuser struct {
 	Opusername   string `xorm:"not null default '''' VARCHAR(15)"`
 	Displayorder int    `xorm:"not null default 0 index(displayorder) MEDIUMINT(8)"`
 }
+
+func (t *PreHomeSpecialuser) TableName() string {
+	return "pre_home_specialuser"
+}

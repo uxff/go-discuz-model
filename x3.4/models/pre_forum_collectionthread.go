@@ -6,3 +6,7 @@ type PreForumCollectionthread struct {
 	Dateline int    `xorm:"not null default 0 index(ctid) INT(10)"`
 	Reason   string `xorm:"not null default '''' VARCHAR(255)"`
 }
+
+func (t *PreForumCollectionthread) TableName() string {
+	return "pre_forum_collectionthread"
+}

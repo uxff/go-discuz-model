@@ -6,3 +6,7 @@ type PreUcenterTags struct {
 	Data       string `xorm:"default 'NULL' MEDIUMTEXT"`
 	Expiration int    `xorm:"not null INT(10)"`
 }
+
+func (t *PreUcenterTags) TableName() string {
+	return "pre_ucenter_tags"
+}

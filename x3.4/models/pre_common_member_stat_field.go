@@ -8,3 +8,7 @@ type PreCommonMemberStatField struct {
 	Users      int    `xorm:"not null default 0 MEDIUMINT(8)"`
 	Updatetime int    `xorm:"not null default 0 INT(10)"`
 }
+
+func (t *PreCommonMemberStatField) TableName() string {
+	return "pre_common_member_stat_field"
+}

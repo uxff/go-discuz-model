@@ -8,3 +8,7 @@ type PreCommonWord struct {
 	Replacement string `xorm:"not null default '''' VARCHAR(255)"`
 	Extra       string `xorm:"not null default '''' VARCHAR(255)"`
 }
+
+func (t *PreCommonWord) TableName() string {
+	return "pre_common_word"
+}

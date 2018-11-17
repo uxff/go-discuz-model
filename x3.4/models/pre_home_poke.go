@@ -8,3 +8,7 @@ type PreHomePoke struct {
 	Dateline     int    `xorm:"not null default 0 index(uid) INT(10)"`
 	Iconid       int    `xorm:"not null default 0 SMALLINT(6)"`
 }
+
+func (t *PreHomePoke) TableName() string {
+	return "pre_home_poke"
+}

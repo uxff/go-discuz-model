@@ -9,3 +9,7 @@ type PreForumThreadlog struct {
 	Expiry   int    `xorm:"not null default 0 INT(10)"`
 	Dateline int    `xorm:"not null default 0 index INT(10)"`
 }
+
+func (t *PreForumThreadlog) TableName() string {
+	return "pre_forum_threadlog"
+}

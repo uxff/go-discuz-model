@@ -10,3 +10,7 @@ type PreCommonMemberValidate struct {
 	Message     string `xorm:"not null TEXT"`
 	Remark      string `xorm:"not null TEXT"`
 }
+
+func (t *PreCommonMemberValidate) TableName() string {
+	return "pre_common_member_validate"
+}

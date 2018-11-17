@@ -14,3 +14,7 @@ type PreForumPolloptionImage struct {
 	Thumb      int    `xorm:"not null default 0 TINYINT(1)"`
 	Dateline   int    `xorm:"not null default 0 INT(10)"`
 }
+
+func (t *PreForumPolloptionImage) TableName() string {
+	return "pre_forum_polloption_image"
+}

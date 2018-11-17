@@ -9,3 +9,7 @@ type PreCommonFriendlink struct {
 	Logo         string `xorm:"not null default '''' VARCHAR(255)"`
 	Type         int    `xorm:"not null default 0 TINYINT(3)"`
 }
+
+func (t *PreCommonFriendlink) TableName() string {
+	return "pre_common_friendlink"
+}

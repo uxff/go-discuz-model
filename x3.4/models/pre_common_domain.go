@@ -6,3 +6,7 @@ type PreCommonDomain struct {
 	Id         int    `xorm:"not null pk default 0 MEDIUMINT(8)"`
 	Idtype     string `xorm:"not null pk default '''' index CHAR(15)"`
 }
+
+func (t *PreCommonDomain) TableName() string {
+	return "pre_common_domain"
+}

@@ -15,3 +15,7 @@ type PreCommonReport struct {
 	Opresult string `xorm:"not null default '''' VARCHAR(255)"`
 	Fid      int    `xorm:"not null default 0 index MEDIUMINT(8)"`
 }
+
+func (t *PreCommonReport) TableName() string {
+	return "pre_common_report"
+}

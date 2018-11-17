@@ -15,3 +15,7 @@ type PreForumForumrecommend struct {
 	Aid          int    `xorm:"not null default 0 MEDIUMINT(8)"`
 	Filename     string `xorm:"not null default '''' CHAR(100)"`
 }
+
+func (t *PreForumForumrecommend) TableName() string {
+	return "pre_forum_forumrecommend"
+}

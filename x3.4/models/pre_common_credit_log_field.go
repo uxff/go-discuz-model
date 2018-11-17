@@ -5,3 +5,7 @@ type PreCommonCreditLogField struct {
 	Title string `xorm:"not null VARCHAR(100)"`
 	Text  string `xorm:"not null TEXT"`
 }
+
+func (t *PreCommonCreditLogField) TableName() string {
+	return "pre_common_credit_log_field"
+}

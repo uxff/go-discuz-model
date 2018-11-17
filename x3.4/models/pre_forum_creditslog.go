@@ -10,3 +10,7 @@ type PreForumCreditslog struct {
 	Dateline       int    `xorm:"not null default 0 index(uid) INT(10)"`
 	Operation      string `xorm:"not null default '''' CHAR(3)"`
 }
+
+func (t *PreForumCreditslog) TableName() string {
+	return "pre_forum_creditslog"
+}

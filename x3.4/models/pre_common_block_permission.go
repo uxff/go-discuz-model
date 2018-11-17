@@ -8,3 +8,7 @@ type PreCommonBlockPermission struct {
 	Needverify       int    `xorm:"not null default 0 TINYINT(1)"`
 	Inheritedtplname string `xorm:"not null default '''' VARCHAR(255)"`
 }
+
+func (t *PreCommonBlockPermission) TableName() string {
+	return "pre_common_block_permission"
+}

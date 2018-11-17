@@ -48,3 +48,7 @@ type PreForumForumfield struct {
 	Livetid          int    `xorm:"not null default 0 MEDIUMINT(8)"`
 	Price            int    `xorm:"not null default 0 MEDIUMINT(8)"`
 }
+
+func (t *PreForumForumfield) TableName() string {
+	return "pre_forum_forumfield"
+}

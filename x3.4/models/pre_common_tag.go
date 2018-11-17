@@ -5,3 +5,7 @@ type PreCommonTag struct {
 	Tagname string `xorm:"not null default '''' index CHAR(20)"`
 	Status  int    `xorm:"not null default 0 index(status) TINYINT(1)"`
 }
+
+func (t *PreCommonTag) TableName() string {
+	return "pre_common_tag"
+}

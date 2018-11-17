@@ -7,3 +7,7 @@ type PreMobileWechatResource struct {
 	Type     int    `xorm:"not null default 0 index TINYINT(1)"`
 	Data     string `xorm:"not null TEXT"`
 }
+
+func (t *PreMobileWechatResource) TableName() string {
+	return "pre_mobile_wechat_resource"
+}

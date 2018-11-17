@@ -18,3 +18,7 @@ type PreHomeAlbum struct {
 	Sharetimes int    `xorm:"not null MEDIUMINT(8)"`
 	Depict     string `xorm:"not null TEXT"`
 }
+
+func (t *PreHomeAlbum) TableName() string {
+	return "pre_home_album"
+}

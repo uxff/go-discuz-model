@@ -11,3 +11,7 @@ type PreForumGrouplevel struct {
 	Postpolicy    string `xorm:"not null TEXT"`
 	Specialswitch string `xorm:"not null TEXT"`
 }
+
+func (t *PreForumGrouplevel) TableName() string {
+	return "pre_forum_grouplevel"
+}

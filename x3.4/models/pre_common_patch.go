@@ -7,3 +7,7 @@ type PreCommonPatch struct {
 	Status   int    `xorm:"not null default 0 TINYINT(1)"`
 	Dateline int    `xorm:"not null default 0 INT(10)"`
 }
+
+func (t *PreCommonPatch) TableName() string {
+	return "pre_common_patch"
+}

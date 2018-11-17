@@ -7,3 +7,7 @@ type PreHomeShow struct {
 	Credit    int    `xorm:"not null default 0 index INT(10)"`
 	Note      string `xorm:"not null default '''' VARCHAR(100)"`
 }
+
+func (t *PreHomeShow) TableName() string {
+	return "pre_home_show"
+}

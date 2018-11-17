@@ -6,3 +6,7 @@ type PreForumThreadprofile struct {
 	Template string `xorm:"not null TEXT"`
 	Global   int    `xorm:"not null default 0 index TINYINT(1)"`
 }
+
+func (t *PreForumThreadprofile) TableName() string {
+	return "pre_forum_threadprofile"
+}

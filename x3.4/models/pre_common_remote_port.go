@@ -6,3 +6,7 @@ type PreCommonRemotePort struct {
 	Useip  string `xorm:"not null default '''' CHAR(15)"`
 	Port   int    `xorm:"not null default 0 SMALLINT(6)"`
 }
+
+func (t *PreCommonRemotePort) TableName() string {
+	return "pre_common_remote_port"
+}

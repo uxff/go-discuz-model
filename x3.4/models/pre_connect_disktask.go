@@ -12,3 +12,7 @@ type PreConnectDisktask struct {
 	Downloadtime int    `xorm:"not null default 0 INT(10)"`
 	Extra        string `xorm:"default 'NULL' TEXT"`
 }
+
+func (t *PreConnectDisktask) TableName() string {
+	return "pre_connect_disktask"
+}

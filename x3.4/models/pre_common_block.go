@@ -28,3 +28,7 @@ type PreCommonBlock struct {
 	Notinherited   int    `xorm:"not null default 0 TINYINT(1)"`
 	Isblank        int    `xorm:"not null default 0 TINYINT(1)"`
 }
+
+func (t *PreCommonBlock) TableName() string {
+	return "pre_common_block"
+}

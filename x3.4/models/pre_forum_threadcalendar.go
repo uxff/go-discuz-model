@@ -6,3 +6,7 @@ type PreForumThreadcalendar struct {
 	Dateline int `xorm:"not null default 0 index(fid) INT(10)"`
 	Hotnum   int `xorm:"not null default 0 INT(10)"`
 }
+
+func (t *PreForumThreadcalendar) TableName() string {
+	return "pre_forum_threadcalendar"
+}

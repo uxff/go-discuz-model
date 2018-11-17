@@ -10,3 +10,7 @@ type PreConnectTthreadlog struct {
 	Updatetime int    `xorm:"default 0 index(updatetime) INT(10)"`
 	Dateline   int    `xorm:"default 0 INT(10)"`
 }
+
+func (t *PreConnectTthreadlog) TableName() string {
+	return "pre_connect_tthreadlog"
+}

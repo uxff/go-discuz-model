@@ -8,3 +8,7 @@ type PrePortalArticleCount struct {
 	Favtimes   int `xorm:"not null default 0 MEDIUMINT(8)"`
 	Sharetimes int `xorm:"not null default 0 MEDIUMINT(8)"`
 }
+
+func (t *PrePortalArticleCount) TableName() string {
+	return "pre_portal_article_count"
+}

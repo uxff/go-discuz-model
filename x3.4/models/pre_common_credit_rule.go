@@ -18,3 +18,7 @@ type PreCommonCreditRule struct {
 	Extcredits8 int    `xorm:"not null default 0 INT(10)"`
 	Fids        string `xorm:"not null TEXT"`
 }
+
+func (t *PreCommonCreditRule) TableName() string {
+	return "pre_common_credit_rule"
+}

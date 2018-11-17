@@ -10,3 +10,7 @@ type PreForumTypevar struct {
 	Displayorder int `xorm:"not null default 0 TINYINT(3)"`
 	Subjectshow  int `xorm:"not null default 0 TINYINT(1)"`
 }
+
+func (t *PreForumTypevar) TableName() string {
+	return "pre_forum_typevar"
+}

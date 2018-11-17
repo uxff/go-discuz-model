@@ -32,3 +32,7 @@ type PreForumTrade struct {
 	Costcredit     int    `xorm:"not null default 0 INT(10)"`
 	Credittradesum int    `xorm:"not null default 0 index INT(10)"`
 }
+
+func (t *PreForumTrade) TableName() string {
+	return "pre_forum_trade"
+}

@@ -25,3 +25,7 @@ type PreHomeFeedApp struct {
 	Image4Link    string `xorm:"not null default '''' VARCHAR(255)"`
 	TargetIds     string `xorm:"not null TEXT"`
 }
+
+func (t *PreHomeFeedApp) TableName() string {
+	return "pre_home_feed_app"
+}

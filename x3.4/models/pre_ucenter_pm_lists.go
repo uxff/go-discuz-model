@@ -10,3 +10,7 @@ type PreUcenterPmLists struct {
 	Dateline    int    `xorm:"not null default 0 index(authorid) INT(10)"`
 	Lastmessage string `xorm:"not null TEXT"`
 }
+
+func (t *PreUcenterPmLists) TableName() string {
+	return "pre_ucenter_pm_lists"
+}

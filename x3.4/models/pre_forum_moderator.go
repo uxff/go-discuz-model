@@ -6,3 +6,7 @@ type PreForumModerator struct {
 	Displayorder int `xorm:"not null default 0 TINYINT(3)"`
 	Inherited    int `xorm:"not null default 0 TINYINT(1)"`
 }
+
+func (t *PreForumModerator) TableName() string {
+	return "pre_forum_moderator"
+}

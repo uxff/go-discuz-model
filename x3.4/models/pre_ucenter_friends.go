@@ -8,3 +8,7 @@ type PreUcenterFriends struct {
 	Delstatus int    `xorm:"not null default 0 TINYINT(1)"`
 	Comment   string `xorm:"not null default '''' CHAR(255)"`
 }
+
+func (t *PreUcenterFriends) TableName() string {
+	return "pre_ucenter_friends"
+}

@@ -9,3 +9,7 @@ type PreForumFaq struct {
 	Title        string `xorm:"not null VARCHAR(50)"`
 	Message      string `xorm:"not null TEXT"`
 }
+
+func (t *PreForumFaq) TableName() string {
+	return "pre_forum_faq"
+}

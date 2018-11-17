@@ -8,3 +8,7 @@ type PreForumThreadclass struct {
 	Icon         string `xorm:"not null VARCHAR(255)"`
 	Moderators   int    `xorm:"not null default 0 TINYINT(1)"`
 }
+
+func (t *PreForumThreadclass) TableName() string {
+	return "pre_forum_threadclass"
+}

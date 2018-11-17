@@ -6,3 +6,7 @@ type PreHomeUserappfield struct {
 	Profilelink string `xorm:"not null TEXT"`
 	Myml        string `xorm:"not null TEXT"`
 }
+
+func (t *PreHomeUserappfield) TableName() string {
+	return "pre_home_userappfield"
+}

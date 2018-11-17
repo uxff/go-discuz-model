@@ -9,3 +9,7 @@ type PreHomeFriend struct {
 	Dateline  int    `xorm:"not null default 0 index(uid) INT(10)"`
 	Note      string `xorm:"not null default '''' VARCHAR(255)"`
 }
+
+func (t *PreHomeFriend) TableName() string {
+	return "pre_home_friend"
+}

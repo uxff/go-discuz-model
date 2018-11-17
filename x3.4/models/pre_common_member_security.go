@@ -9,3 +9,7 @@ type PreCommonMemberSecurity struct {
 	Newvalue   string `xorm:"not null TEXT"`
 	Dateline   int    `xorm:"not null default 0 index INT(10)"`
 }
+
+func (t *PreCommonMemberSecurity) TableName() string {
+	return "pre_common_member_security"
+}

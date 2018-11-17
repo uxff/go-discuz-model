@@ -7,3 +7,7 @@ type PreForumHotreplyNumber struct {
 	Against int `xorm:"not null default 0 SMALLINT(6)"`
 	Total   int `xorm:"not null default 0 index(tid) MEDIUMINT(8)"`
 }
+
+func (t *PreForumHotreplyNumber) TableName() string {
+	return "pre_forum_hotreply_number"
+}

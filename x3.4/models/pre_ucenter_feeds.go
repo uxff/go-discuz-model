@@ -24,3 +24,7 @@ type PreUcenterFeeds struct {
 	Image4Link    string `xorm:"not null default '''' VARCHAR(255)"`
 	TargetIds     string `xorm:"not null default '''' VARCHAR(255)"`
 }
+
+func (t *PreUcenterFeeds) TableName() string {
+	return "pre_ucenter_feeds"
+}

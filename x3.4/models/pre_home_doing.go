@@ -12,3 +12,7 @@ type PreHomeDoing struct {
 	Replynum int    `xorm:"not null default 0 INT(10)"`
 	Status   int    `xorm:"not null default 0 TINYINT(1)"`
 }
+
+func (t *PreHomeDoing) TableName() string {
+	return "pre_home_doing"
+}

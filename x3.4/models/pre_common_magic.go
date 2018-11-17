@@ -19,3 +19,7 @@ type PreCommonMagic struct {
 	Magicperm    string `xorm:"not null TEXT"`
 	Useevent     int    `xorm:"not null default 0 TINYINT(1)"`
 }
+
+func (t *PreCommonMagic) TableName() string {
+	return "pre_common_magic"
+}

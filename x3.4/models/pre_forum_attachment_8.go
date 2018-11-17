@@ -18,3 +18,7 @@ type PreForumAttachment8 struct {
 	Thumb       int    `xorm:"not null default 0 TINYINT(1)"`
 	Picid       int    `xorm:"not null default 0 MEDIUMINT(8)"`
 }
+
+func (t *PreForumAttachment8) TableName() string {
+	return "pre_forum_attachment_8"
+}

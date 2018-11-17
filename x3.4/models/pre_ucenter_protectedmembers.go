@@ -7,3 +7,7 @@ type PreUcenterProtectedmembers struct {
 	Dateline int    `xorm:"not null default 0 INT(10)"`
 	Admin    string `xorm:"not null default ''0'' CHAR(15)"`
 }
+
+func (t *PreUcenterProtectedmembers) TableName() string {
+	return "pre_ucenter_protectedmembers"
+}

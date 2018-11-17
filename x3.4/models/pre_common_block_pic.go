@@ -8,3 +8,7 @@ type PreCommonBlockPic struct {
 	Picflag int    `xorm:"not null default 0 TINYINT(1)"`
 	Type    int    `xorm:"not null default 0 TINYINT(1)"`
 }
+
+func (t *PreCommonBlockPic) TableName() string {
+	return "pre_common_block_pic"
+}

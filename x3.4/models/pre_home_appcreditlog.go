@@ -10,3 +10,7 @@ type PreHomeAppcreditlog struct {
 	Note     string `xorm:"not null TEXT"`
 	Dateline int    `xorm:"not null default 0 index(uid) INT(10)"`
 }
+
+func (t *PreHomeAppcreditlog) TableName() string {
+	return "pre_home_appcreditlog"
+}

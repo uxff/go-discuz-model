@@ -28,3 +28,7 @@ type PreForumPost struct {
 	Replycredit int    `xorm:"not null default 0 INT(10)"`
 	Position    int    `xorm:"not null pk autoincr INT(8)"`
 }
+
+func (t *PreForumPost) TableName() string {
+	return "pre_forum_post"
+}

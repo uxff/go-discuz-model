@@ -8,3 +8,7 @@ type PreHomeFriendRequest struct {
 	Note      string `xorm:"not null default '''' CHAR(60)"`
 	Dateline  int    `xorm:"not null default 0 index(dateline) INT(10)"`
 }
+
+func (t *PreHomeFriendRequest) TableName() string {
+	return "pre_home_friend_request"
+}

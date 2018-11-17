@@ -10,3 +10,7 @@ type PreCommonDiyData struct {
 	Username      string `xorm:"not null default '''' VARCHAR(15)"`
 	Dateline      int    `xorm:"not null default 0 INT(10)"`
 }
+
+func (t *PreCommonDiyData) TableName() string {
+	return "pre_common_diy_data"
+}

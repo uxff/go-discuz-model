@@ -5,3 +5,7 @@ type PreHomeBlacklist struct {
 	Buid     int `xorm:"not null pk default 0 MEDIUMINT(8)"`
 	Dateline int `xorm:"not null default 0 index(uid) INT(10)"`
 }
+
+func (t *PreHomeBlacklist) TableName() string {
+	return "pre_home_blacklist"
+}

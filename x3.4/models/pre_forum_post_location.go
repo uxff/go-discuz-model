@@ -8,3 +8,7 @@ type PreForumPostLocation struct {
 	Mapy     string `xorm:"not null VARCHAR(255)"`
 	Location string `xorm:"not null VARCHAR(255)"`
 }
+
+func (t *PreForumPostLocation) TableName() string {
+	return "pre_forum_post_location"
+}

@@ -6,3 +6,7 @@ type PreCommonTemplate struct {
 	Directory  string `xorm:"not null default '''' VARCHAR(100)"`
 	Copyright  string `xorm:"not null default '''' VARCHAR(100)"`
 }
+
+func (t *PreCommonTemplate) TableName() string {
+	return "pre_common_template"
+}

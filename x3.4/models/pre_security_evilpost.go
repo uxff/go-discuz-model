@@ -11,3 +11,7 @@ type PreSecurityEvilpost struct {
 	Isreported    int    `xorm:"not null default 0 TINYINT(1)"`
 	Censorword    string `xorm:"not null CHAR(50)"`
 }
+
+func (t *PreSecurityEvilpost) TableName() string {
+	return "pre_security_evilpost"
+}

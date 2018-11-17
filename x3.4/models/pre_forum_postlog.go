@@ -8,3 +8,7 @@ type PreForumPostlog struct {
 	Action   string `xorm:"not null default '''' CHAR(10)"`
 	Dateline int    `xorm:"not null default 0 index INT(10)"`
 }
+
+func (t *PreForumPostlog) TableName() string {
+	return "pre_forum_postlog"
+}

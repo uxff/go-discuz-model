@@ -13,3 +13,7 @@ type PreCommonSearchindex struct {
 	Num          int    `xorm:"not null default 0 SMALLINT(6)"`
 	Ids          string `xorm:"not null TEXT"`
 }
+
+func (t *PreCommonSearchindex) TableName() string {
+	return "pre_common_searchindex"
+}

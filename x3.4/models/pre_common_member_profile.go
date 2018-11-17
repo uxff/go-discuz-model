@@ -54,3 +54,7 @@ type PreCommonMemberProfile struct {
 	Field7          string `xorm:"not null TEXT"`
 	Field8          string `xorm:"not null TEXT"`
 }
+
+func (t *PreCommonMemberProfile) TableName() string {
+	return "pre_common_member_profile"
+}

@@ -7,3 +7,7 @@ type PreMobileWechatAuthcode struct {
 	Status     int    `xorm:"not null default 0 TINYINT(1)"`
 	Createtime int    `xorm:"not null index INT(10)"`
 }
+
+func (t *PreMobileWechatAuthcode) TableName() string {
+	return "pre_mobile_wechat_authcode"
+}

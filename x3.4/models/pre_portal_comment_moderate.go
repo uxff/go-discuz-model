@@ -6,3 +6,7 @@ type PrePortalCommentModerate struct {
 	Status   int    `xorm:"not null default 0 index(idtype) TINYINT(3)"`
 	Dateline int    `xorm:"not null default 0 index(idtype) INT(10)"`
 }
+
+func (t *PrePortalCommentModerate) TableName() string {
+	return "pre_portal_comment_moderate"
+}

@@ -7,3 +7,7 @@ type PreForumCollectionteamworker struct {
 	Username  string `xorm:"not null default '''' VARCHAR(15)"`
 	Lastvisit int    `xorm:"not null default 0 INT(8)"`
 }
+
+func (t *PreForumCollectionteamworker) TableName() string {
+	return "pre_forum_collectionteamworker"
+}

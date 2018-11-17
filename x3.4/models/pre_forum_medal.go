@@ -13,3 +13,7 @@ type PreForumMedal struct {
 	Credit       int    `xorm:"not null default 0 TINYINT(1)"`
 	Price        int    `xorm:"not null default 0 MEDIUMINT(8)"`
 }
+
+func (t *PreForumMedal) TableName() string {
+	return "pre_forum_medal"
+}

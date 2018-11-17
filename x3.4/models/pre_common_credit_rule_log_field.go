@@ -7,3 +7,7 @@ type PreCommonCreditRuleLogField struct {
 	User string `xorm:"not null TEXT"`
 	App  string `xorm:"not null TEXT"`
 }
+
+func (t *PreCommonCreditRuleLogField) TableName() string {
+	return "pre_common_credit_rule_log_field"
+}

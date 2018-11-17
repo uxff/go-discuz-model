@@ -6,3 +6,7 @@ type PreCommonSyscache struct {
 	Dateline int    `xorm:"not null INT(10)"`
 	Data     []byte `xorm:"not null MEDIUMBLOB"`
 }
+
+func (t *PreCommonSyscache) TableName() string {
+	return "pre_common_syscache"
+}

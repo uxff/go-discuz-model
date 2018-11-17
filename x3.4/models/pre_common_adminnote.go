@@ -9,3 +9,7 @@ type PreCommonAdminnote struct {
 	Expiration int    `xorm:"not null default 0 INT(10)"`
 	Message    string `xorm:"not null TEXT"`
 }
+
+func (t *PreCommonAdminnote) TableName() string {
+	return "pre_common_adminnote"
+}

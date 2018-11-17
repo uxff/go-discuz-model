@@ -5,3 +5,7 @@ type PreForumFilterPost struct {
 	Pid        int `xorm:"not null pk default 0 INT(10)"`
 	Postlength int `xorm:"not null default 0 index(tid) INT(10)"`
 }
+
+func (t *PreForumFilterPost) TableName() string {
+	return "pre_forum_filter_post"
+}

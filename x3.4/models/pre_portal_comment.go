@@ -12,3 +12,7 @@ type PrePortalComment struct {
 	Status   int    `xorm:"not null default 0 TINYINT(1)"`
 	Message  string `xorm:"not null TEXT"`
 }
+
+func (t *PrePortalComment) TableName() string {
+	return "pre_portal_comment"
+}

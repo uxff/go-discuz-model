@@ -20,3 +20,7 @@ type PreForumDebate struct {
 	Affirmreplies  int    `xorm:"not null MEDIUMINT(8)"`
 	Negareplies    int    `xorm:"not null MEDIUMINT(8)"`
 }
+
+func (t *PreForumDebate) TableName() string {
+	return "pre_forum_debate"
+}

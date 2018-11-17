@@ -9,3 +9,7 @@ type PreForumMedallog struct {
 	Expiration int `xorm:"not null default 0 index(status) INT(10)"`
 	Status     int `xorm:"not null default 0 index(status) TINYINT(1)"`
 }
+
+func (t *PreForumMedallog) TableName() string {
+	return "pre_forum_medallog"
+}

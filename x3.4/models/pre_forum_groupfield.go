@@ -7,3 +7,7 @@ type PreForumGroupfield struct {
 	Type     string `xorm:"not null pk index unique(types) VARCHAR(255)"`
 	Data     string `xorm:"not null TEXT"`
 }
+
+func (t *PreForumGroupfield) TableName() string {
+	return "pre_forum_groupfield"
+}

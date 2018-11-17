@@ -10,3 +10,7 @@ type PreHomeFavorite struct {
 	Description string `xorm:"not null TEXT"`
 	Dateline    int    `xorm:"not null default 0 index(uid) INT(10)"`
 }
+
+func (t *PreHomeFavorite) TableName() string {
+	return "pre_home_favorite"
+}

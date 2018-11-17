@@ -12,3 +12,7 @@ type PreCommonAdvertisement struct {
 	Starttime    int    `xorm:"not null default 0 INT(10)"`
 	Endtime      int    `xorm:"not null default 0 INT(10)"`
 }
+
+func (t *PreCommonAdvertisement) TableName() string {
+	return "pre_common_advertisement"
+}

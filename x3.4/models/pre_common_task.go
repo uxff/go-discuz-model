@@ -22,3 +22,7 @@ type PreCommonTask struct {
 	Displayorder  int    `xorm:"not null default 0 SMALLINT(6)"`
 	Version       string `xorm:"not null default '''' VARCHAR(15)"`
 }
+
+func (t *PreCommonTask) TableName() string {
+	return "pre_common_task"
+}

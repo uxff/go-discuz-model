@@ -16,3 +16,7 @@ type PreCommonInvite struct {
 	Status      int    `xorm:"not null default 1 TINYINT(1)"`
 	Orderid     string `xorm:"not null default '''' CHAR(32)"`
 }
+
+func (t *PreCommonInvite) TableName() string {
+	return "pre_common_invite"
+}

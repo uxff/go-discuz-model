@@ -39,3 +39,7 @@ type PrePortalArticleTitle struct {
 	Htmlname     string `xorm:"not null default '''' VARCHAR(255)"`
 	Htmldir      string `xorm:"not null default '''' VARCHAR(255)"`
 }
+
+func (t *PrePortalArticleTitle) TableName() string {
+	return "pre_portal_article_title"
+}

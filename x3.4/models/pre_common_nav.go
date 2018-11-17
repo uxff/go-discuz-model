@@ -21,3 +21,7 @@ type PreCommonNav struct {
 	Navtype      int    `xorm:"not null default 0 index TINYINT(1)"`
 	Logo         string `xorm:"not null VARCHAR(255)"`
 }
+
+func (t *PreCommonNav) TableName() string {
+	return "pre_common_nav"
+}

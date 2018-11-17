@@ -6,3 +6,7 @@ type PreCommonRelatedlink struct {
 	Url    string `xorm:"not null default '''' VARCHAR(255)"`
 	Extent int    `xorm:"not null default 0 TINYINT(3)"`
 }
+
+func (t *PreCommonRelatedlink) TableName() string {
+	return "pre_common_relatedlink"
+}

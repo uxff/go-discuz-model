@@ -15,3 +15,7 @@ type PreSecurityFailedlog struct {
 	Extra1       int    `xorm:"not null INT(10)"`
 	Extra2       string `xorm:"not null default ''0'' CHAR(255)"`
 }
+
+func (t *PreSecurityFailedlog) TableName() string {
+	return "pre_security_failedlog"
+}

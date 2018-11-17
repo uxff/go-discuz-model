@@ -12,3 +12,7 @@ type PreHomeUserapp struct {
 	Menuorder        int    `xorm:"not null default 0 index(menuorder) SMALLINT(6)"`
 	Displayorder     int    `xorm:"not null default 0 index(displayorder) SMALLINT(6)"`
 }
+
+func (t *PreHomeUserapp) TableName() string {
+	return "pre_home_userapp"
+}

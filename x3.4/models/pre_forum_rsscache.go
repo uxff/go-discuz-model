@@ -11,3 +11,7 @@ type PreForumRsscache struct {
 	Description string `xorm:"not null default '''' CHAR(255)"`
 	Guidetype   string `xorm:"not null default '''' CHAR(10)"`
 }
+
+func (t *PreForumRsscache) TableName() string {
+	return "pre_forum_rsscache"
+}

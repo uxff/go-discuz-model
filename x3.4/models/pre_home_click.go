@@ -8,3 +8,7 @@ type PreHomeClick struct {
 	Available    int    `xorm:"not null default 0 TINYINT(1)"`
 	Displayorder int    `xorm:"not null default 0 index(idtype) TINYINT(6)"`
 }
+
+func (t *PreHomeClick) TableName() string {
+	return "pre_home_click"
+}

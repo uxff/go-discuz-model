@@ -9,3 +9,7 @@ type PreHomePokearchive struct {
 	Dateline int    `xorm:"not null default 0 INT(10)"`
 	Iconid   int    `xorm:"not null default 0 SMALLINT(6)"`
 }
+
+func (t *PreHomePokearchive) TableName() string {
+	return "pre_home_pokearchive"
+}

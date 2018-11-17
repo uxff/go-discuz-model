@@ -7,3 +7,7 @@ type PreForumRelatedthread struct {
 	Keywords       string `xorm:"not null default '''' VARCHAR(255)"`
 	Relatedthreads string `xorm:"not null TEXT"`
 }
+
+func (t *PreForumRelatedthread) TableName() string {
+	return "pre_forum_relatedthread"
+}

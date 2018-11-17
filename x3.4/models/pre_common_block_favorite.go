@@ -6,3 +6,7 @@ type PreCommonBlockFavorite struct {
 	Bid      int `xorm:"not null default 0 MEDIUMINT(8)"`
 	Dateline int `xorm:"not null default 0 index(uid) INT(10)"`
 }
+
+func (t *PreCommonBlockFavorite) TableName() string {
+	return "pre_common_block_favorite"
+}

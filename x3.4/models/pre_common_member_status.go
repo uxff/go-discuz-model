@@ -16,3 +16,7 @@ type PreCommonMemberStatus struct {
 	Sharetimes      int    `xorm:"not null default 0 MEDIUMINT(8)"`
 	Profileprogress int    `xorm:"not null default 0 TINYINT(2)"`
 }
+
+func (t *PreCommonMemberStatus) TableName() string {
+	return "pre_common_member_status"
+}

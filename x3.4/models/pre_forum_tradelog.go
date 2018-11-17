@@ -38,3 +38,7 @@ type PreForumTradelog struct {
 	Credit        int    `xorm:"not null default 0 INT(10)"`
 	Basecredit    int    `xorm:"not null default 0 INT(10)"`
 }
+
+func (t *PreForumTradelog) TableName() string {
+	return "pre_forum_tradelog"
+}

@@ -13,3 +13,7 @@ type PreCommonPlugin struct {
 	Modules     string `xorm:"not null TEXT"`
 	Version     string `xorm:"not null default '''' VARCHAR(20)"`
 }
+
+func (t *PreCommonPlugin) TableName() string {
+	return "pre_common_plugin"
+}

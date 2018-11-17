@@ -11,3 +11,7 @@ type PreCommonPluginvar struct {
 	Value        string `xorm:"not null TEXT"`
 	Extra        string `xorm:"not null TEXT"`
 }
+
+func (t *PreCommonPluginvar) TableName() string {
+	return "pre_common_pluginvar"
+}

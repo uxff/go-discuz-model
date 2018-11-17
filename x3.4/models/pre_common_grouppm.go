@@ -8,3 +8,7 @@ type PreCommonGrouppm struct {
 	Message  string `xorm:"not null TEXT"`
 	Numbers  int    `xorm:"not null default 0 MEDIUMINT(8)"`
 }
+
+func (t *PreCommonGrouppm) TableName() string {
+	return "pre_common_grouppm"
+}

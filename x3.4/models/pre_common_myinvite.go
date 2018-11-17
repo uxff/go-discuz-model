@@ -11,3 +11,7 @@ type PreCommonMyinvite struct {
 	Dateline int    `xorm:"not null default 0 index(uid) INT(10)"`
 	Hash     int    `xorm:"not null default 0 index INT(10)"`
 }
+
+func (t *PreCommonMyinvite) TableName() string {
+	return "pre_common_myinvite"
+}

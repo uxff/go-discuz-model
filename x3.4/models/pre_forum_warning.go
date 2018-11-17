@@ -10,3 +10,7 @@ type PreForumWarning struct {
 	Dateline   int    `xorm:"not null INT(10)"`
 	Reason     string `xorm:"not null CHAR(40)"`
 }
+
+func (t *PreForumWarning) TableName() string {
+	return "pre_forum_warning"
+}

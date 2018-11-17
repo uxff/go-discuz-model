@@ -8,3 +8,7 @@ type PreCommonTemplatePermission struct {
 	Needverify       int    `xorm:"not null default 0 TINYINT(1)"`
 	Inheritedtplname string `xorm:"not null default '''' VARCHAR(255)"`
 }
+
+func (t *PreCommonTemplatePermission) TableName() string {
+	return "pre_common_template_permission"
+}

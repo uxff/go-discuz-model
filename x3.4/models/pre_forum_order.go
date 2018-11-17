@@ -13,3 +13,7 @@ type PreForumOrder struct {
 	Email       string  `xorm:"not null default '''' CHAR(40)"`
 	Ip          string  `xorm:"not null default '''' CHAR(15)"`
 }
+
+func (t *PreForumOrder) TableName() string {
+	return "pre_forum_order"
+}

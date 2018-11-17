@@ -6,3 +6,7 @@ type PreCommonMemberWechat struct {
 	Status     int    `xorm:"not null default 0 TINYINT(1)"`
 	Isregister int    `xorm:"not null default 0 TINYINT(1)"`
 }
+
+func (t *PreCommonMemberWechat) TableName() string {
+	return "pre_common_member_wechat"
+}

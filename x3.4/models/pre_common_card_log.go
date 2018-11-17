@@ -10,3 +10,7 @@ type PreCommonCardLog struct {
 	Description string `xorm:"not null MEDIUMTEXT"`
 	Operation   int    `xorm:"not null default 0 index(operation_dateline) TINYINT(1)"`
 }
+
+func (t *PreCommonCardLog) TableName() string {
+	return "pre_common_card_log"
+}

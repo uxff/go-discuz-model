@@ -25,3 +25,7 @@ type PreCommonMember struct {
 	Conisbind          int    `xorm:"not null default 0 index TINYINT(1)"`
 	Freeze             int    `xorm:"not null default 0 TINYINT(1)"`
 }
+
+func (t *PreCommonMember) TableName() string {
+	return "pre_common_member"
+}

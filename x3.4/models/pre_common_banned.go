@@ -10,3 +10,7 @@ type PreCommonBanned struct {
 	Dateline   int    `xorm:"not null default 0 INT(10)"`
 	Expiration int    `xorm:"not null default 0 INT(10)"`
 }
+
+func (t *PreCommonBanned) TableName() string {
+	return "pre_common_banned"
+}

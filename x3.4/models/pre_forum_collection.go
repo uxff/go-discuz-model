@@ -20,3 +20,7 @@ type PreForumCollection struct {
 	Lastvisit    int     `xorm:"not null default 0 INT(10)"`
 	Keyword      string  `xorm:"not null default '''' VARCHAR(255)"`
 }
+
+func (t *PreForumCollection) TableName() string {
+	return "pre_forum_collection"
+}

@@ -7,3 +7,7 @@ type PreConnectMemberbindlog struct {
 	Type     int    `xorm:"not null default 0 TINYINT(1)"`
 	Dateline int    `xorm:"not null default 0 index INT(10)"`
 }
+
+func (t *PreConnectMemberbindlog) TableName() string {
+	return "pre_connect_memberbindlog"
+}

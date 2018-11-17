@@ -16,3 +16,7 @@ type PreUcenterAdmins struct {
 	Allowadmincache   int    `xorm:"not null default 0 TINYINT(1)"`
 	Allowadminlog     int    `xorm:"not null default 0 TINYINT(1)"`
 }
+
+func (t *PreUcenterAdmins) TableName() string {
+	return "pre_ucenter_admins"
+}

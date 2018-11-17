@@ -18,3 +18,7 @@ type PreHomeShare struct {
 	Hotuser       string `xorm:"not null TEXT"`
 	Status        int    `xorm:"not null TINYINT(1)"`
 }
+
+func (t *PreHomeShare) TableName() string {
+	return "pre_home_share"
+}

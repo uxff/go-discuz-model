@@ -15,6 +15,8 @@ xorm reverse mysql 'root:123456@tcp(192.168.38.134:3306)/discuz_co7?charset=utf8
 
 ```
 
+use model, with orm.SnakeMapper.
+
 
 
 

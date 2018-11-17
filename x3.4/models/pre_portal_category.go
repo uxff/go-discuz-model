@@ -29,3 +29,7 @@ type PrePortalCategory struct {
 	Noantitheft          int    `xorm:"not null default 0 TINYINT(1)"`
 	Lastpublish          int    `xorm:"not null default 0 INT(10)"`
 }
+
+func (t *PrePortalCategory) TableName() string {
+	return "pre_portal_category"
+}

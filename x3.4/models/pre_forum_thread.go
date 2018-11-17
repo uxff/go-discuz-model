@@ -44,3 +44,7 @@ type PreForumThread struct {
 	Comments     int    `xorm:"not null default 0 INT(10)"`
 	Hidden       int    `xorm:"not null default 0 SMALLINT(6)"`
 }
+
+func (t *PreForumThread) TableName() string {
+	return "pre_forum_thread"
+}

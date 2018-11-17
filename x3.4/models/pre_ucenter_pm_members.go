@@ -8,3 +8,7 @@ type PreUcenterPmMembers struct {
 	Lastupdate   int `xorm:"not null default 0 index(lastupdate) INT(10)"`
 	Lastdateline int `xorm:"not null default 0 index(lastdateline) INT(10)"`
 }
+
+func (t *PreUcenterPmMembers) TableName() string {
+	return "pre_ucenter_pm_members"
+}

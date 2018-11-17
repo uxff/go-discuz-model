@@ -14,3 +14,7 @@ type PreHomeComment struct {
 	Magicflicker int    `xorm:"not null default 0 TINYINT(1)"`
 	Status       int    `xorm:"not null default 0 TINYINT(1)"`
 }
+
+func (t *PreHomeComment) TableName() string {
+	return "pre_home_comment"
+}

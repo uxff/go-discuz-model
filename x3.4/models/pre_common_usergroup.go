@@ -19,3 +19,7 @@ type PreCommonUsergroup struct {
 	Inviteprice     int    `xorm:"not null default 0 SMALLINT(6)"`
 	Maxinviteday    int    `xorm:"not null default 0 SMALLINT(6)"`
 }
+
+func (t *PreCommonUsergroup) TableName() string {
+	return "pre_common_usergroup"
+}

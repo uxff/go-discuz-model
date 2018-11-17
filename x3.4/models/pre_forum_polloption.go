@@ -8,3 +8,7 @@ type PreForumPolloption struct {
 	Polloption   string `xorm:"not null default '''' VARCHAR(80)"`
 	Voterids     string `xorm:"not null MEDIUMTEXT"`
 }
+
+func (t *PreForumPolloption) TableName() string {
+	return "pre_forum_polloption"
+}

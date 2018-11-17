@@ -14,3 +14,7 @@ type PreForumBbcode struct {
 	Displayorder int    `xorm:"not null default 0 TINYINT(3)"`
 	Perm         string `xorm:"not null TEXT"`
 }
+
+func (t *PreForumBbcode) TableName() string {
+	return "pre_forum_bbcode"
+}

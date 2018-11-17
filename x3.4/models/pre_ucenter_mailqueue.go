@@ -14,3 +14,7 @@ type PreUcenterMailqueue struct {
 	Failures int    `xorm:"not null default 0 index(level) TINYINT(3)"`
 	Appid    int    `xorm:"not null default 0 index SMALLINT(6)"`
 }
+
+func (t *PreUcenterMailqueue) TableName() string {
+	return "pre_ucenter_mailqueue"
+}

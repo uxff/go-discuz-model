@@ -10,3 +10,7 @@ type PrePortalArticleContent struct {
 	Pageorder int    `xorm:"not null default 0 index(aid) index SMALLINT(6)"`
 	Dateline  int    `xorm:"not null default 0 INT(10)"`
 }
+
+func (t *PrePortalArticleContent) TableName() string {
+	return "pre_portal_article_content"
+}

@@ -13,3 +13,7 @@ type PreCommonBlockStyle struct {
 	Fields     string `xorm:"not null TEXT"`
 	Moreurl    int    `xorm:"not null default 0 TINYINT(1)"`
 }
+
+func (t *PreCommonBlockStyle) TableName() string {
+	return "pre_common_block_style"
+}

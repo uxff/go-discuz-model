@@ -20,3 +20,7 @@ type PreCommonMemberFieldHome struct {
 	Magicgift        string `xorm:"not null TEXT"`
 	Stickblogs       string `xorm:"not null TEXT"`
 }
+
+func (t *PreCommonMemberFieldHome) TableName() string {
+	return "pre_common_member_field_home"
+}

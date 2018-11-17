@@ -6,3 +6,7 @@ type PreForumOnlinelist struct {
 	Title        string `xorm:"not null default '''' VARCHAR(30)"`
 	Url          string `xorm:"not null default '''' VARCHAR(30)"`
 }
+
+func (t *PreForumOnlinelist) TableName() string {
+	return "pre_forum_onlinelist"
+}

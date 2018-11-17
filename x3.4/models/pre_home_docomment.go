@@ -11,3 +11,7 @@ type PreHomeDocomment struct {
 	Ip       string `xorm:"not null default '''' VARCHAR(20)"`
 	Grade    int    `xorm:"not null default 0 SMALLINT(6)"`
 }
+
+func (t *PreHomeDocomment) TableName() string {
+	return "pre_home_docomment"
+}

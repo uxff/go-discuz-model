@@ -18,3 +18,7 @@ type PreMobileWechatMasssend struct {
 	ResErrorcount  int    `xorm:"default NULL INT(10)"`
 	ResFinishAt    int    `xorm:"default NULL INT(10)"`
 }
+
+func (t *PreMobileWechatMasssend) TableName() string {
+	return "pre_mobile_wechat_masssend"
+}

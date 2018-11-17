@@ -10,3 +10,7 @@ type PreCommonAdmincpCmenu struct {
 	Uid          int    `xorm:"not null index MEDIUMINT(8)"`
 	Dateline     int    `xorm:"not null INT(10)"`
 }
+
+func (t *PreCommonAdmincpCmenu) TableName() string {
+	return "pre_common_admincp_cmenu"
+}

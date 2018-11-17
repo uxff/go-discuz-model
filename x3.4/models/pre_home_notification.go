@@ -14,3 +14,7 @@ type PreHomeNotification struct {
 	FromNum    int    `xorm:"not null default 0 MEDIUMINT(8)"`
 	Category   int    `xorm:"not null default 0 index(category) TINYINT(1)"`
 }
+
+func (t *PreHomeNotification) TableName() string {
+	return "pre_home_notification"
+}

@@ -8,3 +8,7 @@ type PreForumTypeoptionvar struct {
 	Expiration int    `xorm:"not null default 0 INT(10)"`
 	Value      string `xorm:"not null MEDIUMTEXT"`
 }
+
+func (t *PreForumTypeoptionvar) TableName() string {
+	return "pre_forum_typeoptionvar"
+}

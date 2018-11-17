@@ -14,3 +14,7 @@ type PreForumTradecomment struct {
 	Score       int    `xorm:"not null TINYINT(1)"`
 	Dateline    int    `xorm:"not null index(rateeid) index(raterid) INT(10)"`
 }
+
+func (t *PreForumTradecomment) TableName() string {
+	return "pre_forum_tradecomment"
+}

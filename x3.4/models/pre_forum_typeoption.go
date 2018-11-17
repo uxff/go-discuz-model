@@ -14,3 +14,7 @@ type PreForumTypeoption struct {
 	Rules        string `xorm:"not null MEDIUMTEXT"`
 	Permprompt   string `xorm:"not null MEDIUMTEXT"`
 }
+
+func (t *PreForumTypeoption) TableName() string {
+	return "pre_forum_typeoption"
+}

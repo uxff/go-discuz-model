@@ -13,3 +13,7 @@ type PreCommonCron struct {
 	Hour      int    `xorm:"not null default 0 TINYINT(2)"`
 	Minute    string `xorm:"not null default '''' CHAR(36)"`
 }
+
+func (t *PreCommonCron) TableName() string {
+	return "pre_common_cron"
+}

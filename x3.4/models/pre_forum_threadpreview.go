@@ -5,3 +5,7 @@ type PreForumThreadpreview struct {
 	Relay   int    `xorm:"not null default 0 INT(10)"`
 	Content string `xorm:"not null TEXT"`
 }
+
+func (t *PreForumThreadpreview) TableName() string {
+	return "pre_forum_threadpreview"
+}

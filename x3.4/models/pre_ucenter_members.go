@@ -14,3 +14,7 @@ type PreUcenterMembers struct {
 	Salt          string `xorm:"not null CHAR(6)"`
 	Secques       string `xorm:"not null default '''' CHAR(8)"`
 }
+
+func (t *PreUcenterMembers) TableName() string {
+	return "pre_ucenter_members"
+}

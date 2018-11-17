@@ -12,3 +12,7 @@ type PreForumThreadmod struct {
 	Stamp      int    `xorm:"not null TINYINT(3)"`
 	Reason     string `xorm:"not null default '''' CHAR(40)"`
 }
+
+func (t *PreForumThreadmod) TableName() string {
+	return "pre_forum_threadmod"
+}

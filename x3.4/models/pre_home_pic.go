@@ -28,3 +28,7 @@ type PreHomePic struct {
 	Magicframe int    `xorm:"not null default 0 TINYINT(6)"`
 	Status     int    `xorm:"not null default 0 TINYINT(1)"`
 }
+
+func (t *PreHomePic) TableName() string {
+	return "pre_home_pic"
+}

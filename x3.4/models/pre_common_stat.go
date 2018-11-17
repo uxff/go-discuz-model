@@ -34,3 +34,7 @@ type PreCommonStat struct {
 	Friend       int `xorm:"not null default 0 INT(10)"`
 	Addfriend    int `xorm:"not null default 0 INT(10)"`
 }
+
+func (t *PreCommonStat) TableName() string {
+	return "pre_common_stat"
+}

@@ -6,3 +6,7 @@ type PreForumSpacecache struct {
 	Value      string `xorm:"not null TEXT"`
 	Expiration int    `xorm:"not null default 0 INT(10)"`
 }
+
+func (t *PreForumSpacecache) TableName() string {
+	return "pre_forum_spacecache"
+}

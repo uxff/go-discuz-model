@@ -9,3 +9,7 @@ type PreCommonAdmincpSession struct {
 	Errorcount int    `xorm:"not null default 0 TINYINT(1)"`
 	Storage    string `xorm:"not null MEDIUMTEXT"`
 }
+
+func (t *PreCommonAdmincpSession) TableName() string {
+	return "pre_common_admincp_session"
+}

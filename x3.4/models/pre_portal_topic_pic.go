@@ -13,3 +13,7 @@ type PrePortalTopicPic struct {
 	Thumb    int    `xorm:"not null default 0 TINYINT(1)"`
 	Remote   int    `xorm:"not null default 0 TINYINT(1)"`
 }
+
+func (t *PrePortalTopicPic) TableName() string {
+	return "pre_portal_topic_pic"
+}

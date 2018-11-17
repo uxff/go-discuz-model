@@ -13,3 +13,7 @@ type PreCommonMemberConnect struct {
 	Conisqqshow      int    `xorm:"not null default 0 TINYINT(1)"`
 	Conuintoken      string `xorm:"not null default '''' CHAR(32)"`
 }
+
+func (t *PreCommonMemberConnect) TableName() string {
+	return "pre_common_member_connect"
+}

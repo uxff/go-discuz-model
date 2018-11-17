@@ -20,3 +20,7 @@ type PreCommonBlockItem struct {
 	Startdate    int    `xorm:"not null default 0 INT(10)"`
 	Enddate      int    `xorm:"not null default 0 INT(10)"`
 }
+
+func (t *PreCommonBlockItem) TableName() string {
+	return "pre_common_block_item"
+}

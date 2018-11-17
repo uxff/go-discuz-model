@@ -6,3 +6,7 @@ type PreCommonMailcron struct {
 	Email    string `xorm:"not null default '''' VARCHAR(100)"`
 	Sendtime int    `xorm:"not null default 0 index INT(10)"`
 }
+
+func (t *PreCommonMailcron) TableName() string {
+	return "pre_common_mailcron"
+}

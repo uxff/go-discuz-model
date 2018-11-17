@@ -11,3 +11,7 @@ type PreForumCollectioncomment struct {
 	Port     int     `xorm:"not null default 0 SMALLINT(6)"`
 	Rate     float32 `xorm:"not null default 0 index(userrate) FLOAT"`
 }
+
+func (t *PreForumCollectioncomment) TableName() string {
+	return "pre_forum_collectioncomment"
+}

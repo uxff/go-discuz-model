@@ -6,3 +6,7 @@ type PreCommonStylevar struct {
 	Variable   string `xorm:"not null TEXT"`
 	Substitute string `xorm:"not null TEXT"`
 }
+
+func (t *PreCommonStylevar) TableName() string {
+	return "pre_common_stylevar"
+}

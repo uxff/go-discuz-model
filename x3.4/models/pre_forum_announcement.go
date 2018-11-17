@@ -11,3 +11,7 @@ type PreForumAnnouncement struct {
 	Message      string `xorm:"not null TEXT"`
 	Groups       string `xorm:"not null TEXT"`
 }
+
+func (t *PreForumAnnouncement) TableName() string {
+	return "pre_forum_announcement"
+}

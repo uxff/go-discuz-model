@@ -15,3 +15,7 @@ type PreForumThreadtype struct {
 	Ptemplate    string `xorm:"not null TEXT"`
 	Btemplate    string `xorm:"not null TEXT"`
 }
+
+func (t *PreForumThreadtype) TableName() string {
+	return "pre_forum_threadtype"
+}

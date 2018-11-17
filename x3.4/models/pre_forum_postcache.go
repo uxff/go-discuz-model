@@ -6,3 +6,7 @@ type PreForumPostcache struct {
 	Rate     string `xorm:"not null TEXT"`
 	Dateline int    `xorm:"not null default 0 index INT(10)"`
 }
+
+func (t *PreForumPostcache) TableName() string {
+	return "pre_forum_postcache"
+}

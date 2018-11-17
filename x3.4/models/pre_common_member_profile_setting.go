@@ -19,3 +19,7 @@ type PreCommonMemberProfileSetting struct {
 	Choices        string `xorm:"not null TEXT"`
 	Validate       string `xorm:"not null TEXT"`
 }
+
+func (t *PreCommonMemberProfileSetting) TableName() string {
+	return "pre_common_member_profile_setting"
+}

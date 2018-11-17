@@ -13,3 +13,7 @@ type PrePortalAttachment struct {
 	Remote     int    `xorm:"not null default 0 TINYINT(1)"`
 	Aid        int    `xorm:"not null default 0 index(aid) MEDIUMINT(8)"`
 }
+
+func (t *PrePortalAttachment) TableName() string {
+	return "pre_portal_attachment"
+}

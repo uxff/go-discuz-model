@@ -11,3 +11,7 @@ type PreForumModwork struct {
 	Count     int       `xorm:"not null default 0 SMALLINT(6)"`
 	Posts     int       `xorm:"not null default 0 SMALLINT(6)"`
 }
+
+func (t *PreForumModwork) TableName() string {
+	return "pre_forum_modwork"
+}

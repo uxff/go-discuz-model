@@ -6,3 +6,7 @@ type PreHomeVisitor struct {
 	Vusername string `xorm:"not null default '''' CHAR(15)"`
 	Dateline  int    `xorm:"not null default 0 index INT(10)"`
 }
+
+func (t *PreHomeVisitor) TableName() string {
+	return "pre_home_visitor"
+}

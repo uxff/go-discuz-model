@@ -7,3 +7,7 @@ type PreCommonMailqueue struct {
 	Message  string `xorm:"not null TEXT"`
 	Dateline int    `xorm:"not null default 0 index(mcid) INT(10)"`
 }
+
+func (t *PreCommonMailqueue) TableName() string {
+	return "pre_common_mailqueue"
+}

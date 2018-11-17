@@ -6,3 +6,7 @@ type PreHomeCommentModerate struct {
 	Status   int    `xorm:"not null default 0 index(idtype) TINYINT(3)"`
 	Dateline int    `xorm:"not null default 0 index(idtype) INT(10)"`
 }
+
+func (t *PreHomeCommentModerate) TableName() string {
+	return "pre_home_comment_moderate"
+}

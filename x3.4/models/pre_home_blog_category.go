@@ -7,3 +7,7 @@ type PreHomeBlogCategory struct {
 	Num          int    `xorm:"not null default 0 MEDIUMINT(8)"`
 	Displayorder int    `xorm:"not null default 0 SMALLINT(6)"`
 }
+
+func (t *PreHomeBlogCategory) TableName() string {
+	return "pre_home_blog_category"
+}

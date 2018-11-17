@@ -8,3 +8,7 @@ type PreCommonMytask struct {
 	Csc      string `xorm:"not null default '''' CHAR(255)"`
 	Dateline int    `xorm:"not null default 0 index(parter) INT(10)"`
 }
+
+func (t *PreCommonMytask) TableName() string {
+	return "pre_common_mytask"
+}

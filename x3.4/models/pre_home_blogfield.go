@@ -16,3 +16,7 @@ type PreHomeBlogfield struct {
 	Magicpaper  int    `xorm:"not null default 0 TINYINT(6)"`
 	Pushedaid   int    `xorm:"not null default 0 MEDIUMINT(8)"`
 }
+
+func (t *PreHomeBlogfield) TableName() string {
+	return "pre_home_blogfield"
+}

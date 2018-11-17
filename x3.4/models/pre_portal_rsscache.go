@@ -10,3 +10,7 @@ type PrePortalRsscache struct {
 	Subject     string `xorm:"not null default '''' CHAR(80)"`
 	Description string `xorm:"not null default '''' CHAR(255)"`
 }
+
+func (t *PrePortalRsscache) TableName() string {
+	return "pre_portal_rsscache"
+}

@@ -8,3 +8,7 @@ type PreHomeFollowFeed struct {
 	Note     string `xorm:"not null TEXT"`
 	Dateline int    `xorm:"not null default 0 index(uid) INT(10)"`
 }
+
+func (t *PreHomeFollowFeed) TableName() string {
+	return "pre_home_follow_feed"
+}

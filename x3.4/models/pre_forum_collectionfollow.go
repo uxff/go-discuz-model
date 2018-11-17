@@ -7,3 +7,7 @@ type PreForumCollectionfollow struct {
 	Dateline  int    `xorm:"not null default 0 index(ctid) INT(10)"`
 	Lastvisit int    `xorm:"not null default 0 INT(10)"`
 }
+
+func (t *PreForumCollectionfollow) TableName() string {
+	return "pre_forum_collectionfollow"
+}

@@ -28,3 +28,7 @@ type PreHomeFeed struct {
 	Idtype        string `xorm:"not null default '''' index(id) VARCHAR(15)"`
 	Hot           int    `xorm:"not null default 0 index MEDIUMINT(8)"`
 }
+
+func (t *PreHomeFeed) TableName() string {
+	return "pre_home_feed"
+}

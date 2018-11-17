@@ -8,3 +8,7 @@ type PreUcenterPmMessages2 struct {
 	Delstatus int    `xorm:"not null default 0 index(plid) TINYINT(1)"`
 	Dateline  int    `xorm:"not null default 0 index(dateline) index(plid) INT(10)"`
 }
+
+func (t *PreUcenterPmMessages2) TableName() string {
+	return "pre_ucenter_pm_messages_2"
+}

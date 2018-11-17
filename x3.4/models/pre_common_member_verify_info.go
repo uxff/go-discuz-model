@@ -9,3 +9,7 @@ type PreCommonMemberVerifyInfo struct {
 	Field      string `xorm:"not null TEXT"`
 	Dateline   int    `xorm:"not null default 0 index(uid) INT(10)"`
 }
+
+func (t *PreCommonMemberVerifyInfo) TableName() string {
+	return "pre_common_member_verify_info"
+}

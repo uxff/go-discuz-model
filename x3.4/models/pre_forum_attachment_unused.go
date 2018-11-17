@@ -12,3 +12,7 @@ type PreForumAttachmentUnused struct {
 	Width      int    `xorm:"not null default 0 SMALLINT(6)"`
 	Thumb      int    `xorm:"not null default 0 TINYINT(1)"`
 }
+
+func (t *PreForumAttachmentUnused) TableName() string {
+	return "pre_forum_attachment_unused"
+}

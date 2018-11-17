@@ -22,3 +22,7 @@ type PrePortalTopic struct {
 	Htmlmade      int    `xorm:"not null default 0 TINYINT(1)"`
 	Htmldir       string `xorm:"not null default '''' VARCHAR(255)"`
 }
+
+func (t *PrePortalTopic) TableName() string {
+	return "pre_portal_topic"
+}

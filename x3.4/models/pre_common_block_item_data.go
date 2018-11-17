@@ -25,3 +25,7 @@ type PreCommonBlockItemData struct {
 	Verifiedtime int    `xorm:"not null default 0 index(bid) INT(10)"`
 	Stickgrade   int    `xorm:"not null default 0 index(bid) TINYINT(2)"`
 }
+
+func (t *PreCommonBlockItemData) TableName() string {
+	return "pre_common_block_item_data"
+}

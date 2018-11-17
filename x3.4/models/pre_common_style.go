@@ -7,3 +7,7 @@ type PreCommonStyle struct {
 	Templateid int    `xorm:"not null default 0 SMALLINT(6)"`
 	Extstyle   string `xorm:"not null default '''' VARCHAR(255)"`
 }
+
+func (t *PreCommonStyle) TableName() string {
+	return "pre_common_style"
+}

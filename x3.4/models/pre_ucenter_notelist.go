@@ -12,3 +12,7 @@ type PreUcenterNotelist struct {
 	Pri        int    `xorm:"not null default 0 index(closed) TINYINT(3)"`
 	App1       int    `xorm:"not null TINYINT(4)"`
 }
+
+func (t *PreUcenterNotelist) TableName() string {
+	return "pre_ucenter_notelist"
+}

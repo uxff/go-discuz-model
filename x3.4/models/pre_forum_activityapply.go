@@ -11,3 +11,7 @@ type PreForumActivityapply struct {
 	Payment    int    `xorm:"not null default 0 MEDIUMINT(8)"`
 	Ufielddata string `xorm:"not null TEXT"`
 }
+
+func (t *PreForumActivityapply) TableName() string {
+	return "pre_forum_activityapply"
+}

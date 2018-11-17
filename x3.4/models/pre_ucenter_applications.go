@@ -17,3 +17,7 @@ type PreUcenterApplications struct {
 	Tagtemplates string `xorm:"not null TEXT"`
 	Allowips     string `xorm:"not null TEXT"`
 }
+
+func (t *PreUcenterApplications) TableName() string {
+	return "pre_ucenter_applications"
+}

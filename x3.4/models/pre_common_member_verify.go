@@ -10,3 +10,7 @@ type PreCommonMemberVerify struct {
 	Verify6 int `xorm:"not null default 0 index TINYINT(1)"`
 	Verify7 int `xorm:"not null default 0 index TINYINT(1)"`
 }
+
+func (t *PreCommonMemberVerify) TableName() string {
+	return "pre_common_member_verify"
+}

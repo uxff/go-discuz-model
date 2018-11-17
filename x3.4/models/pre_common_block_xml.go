@@ -10,3 +10,7 @@ type PreCommonBlockXml struct {
 	Signtype string `xorm:"not null VARCHAR(255)"`
 	Data     string `xorm:"not null TEXT"`
 }
+
+func (t *PreCommonBlockXml) TableName() string {
+	return "pre_common_block_xml"
+}

@@ -16,3 +16,7 @@ type PreCommonMyapp struct {
 	Iconstatus       int    `xorm:"not null default 0 TINYINT(2)"`
 	Icondowntime     int    `xorm:"not null default 0 INT(10)"`
 }
+
+func (t *PreCommonMyapp) TableName() string {
+	return "pre_common_myapp"
+}

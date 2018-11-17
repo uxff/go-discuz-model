@@ -13,3 +13,7 @@ type PreForumPostcomment struct {
 	Port     int    `xorm:"not null default 0 SMALLINT(6)"`
 	Rpid     int    `xorm:"not null default 0 index INT(10)"`
 }
+
+func (t *PreForumPostcomment) TableName() string {
+	return "pre_forum_postcomment"
+}

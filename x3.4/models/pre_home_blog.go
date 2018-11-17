@@ -27,3 +27,7 @@ type PreHomeBlog struct {
 	Click7     int    `xorm:"not null default 0 SMALLINT(6)"`
 	Click8     int    `xorm:"not null default 0 SMALLINT(6)"`
 }
+
+func (t *PreHomeBlog) TableName() string {
+	return "pre_home_blog"
+}

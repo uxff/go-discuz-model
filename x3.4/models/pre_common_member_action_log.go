@@ -6,3 +6,7 @@ type PreCommonMemberActionLog struct {
 	Action   int `xorm:"not null default 0 index(dateline) TINYINT(5)"`
 	Dateline int `xorm:"not null default 0 index(dateline) INT(10)"`
 }
+
+func (t *PreCommonMemberActionLog) TableName() string {
+	return "pre_common_member_action_log"
+}

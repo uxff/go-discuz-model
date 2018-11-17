@@ -8,3 +8,7 @@ type PreCommonDistrict struct {
 	Upid         int    `xorm:"not null default 0 index(upid) MEDIUMINT(8)"`
 	Displayorder int    `xorm:"not null default 0 index(upid) SMALLINT(6)"`
 }
+
+func (t *PreCommonDistrict) TableName() string {
+	return "pre_common_district"
+}

@@ -18,3 +18,7 @@ type PreCommonCreditRuleLog struct {
 	Starttime   int `xorm:"not null default 0 INT(10)"`
 	Dateline    int `xorm:"not null default 0 index INT(10)"`
 }
+
+func (t *PreCommonCreditRuleLog) TableName() string {
+	return "pre_common_credit_rule_log"
+}

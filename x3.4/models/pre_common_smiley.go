@@ -8,3 +8,7 @@ type PreCommonSmiley struct {
 	Code         string `xorm:"not null default '''' VARCHAR(30)"`
 	Url          string `xorm:"not null default '''' VARCHAR(30)"`
 }
+
+func (t *PreCommonSmiley) TableName() string {
+	return "pre_common_smiley"
+}

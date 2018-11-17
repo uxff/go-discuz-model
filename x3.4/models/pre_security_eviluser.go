@@ -8,3 +8,7 @@ type PreSecurityEviluser struct {
 	Operateresult int `xorm:"not null default 0 index(operateresult) TINYINT(1)"`
 	Isreported    int `xorm:"not null default 0 TINYINT(1)"`
 }
+
+func (t *PreSecurityEviluser) TableName() string {
+	return "pre_security_eviluser"
+}

@@ -5,3 +5,7 @@ type PreForumThreadhot struct {
 	Fid int `xorm:"not null default 0 index MEDIUMINT(8)"`
 	Tid int `xorm:"not null pk default 0 MEDIUMINT(8)"`
 }
+
+func (t *PreForumThreadhot) TableName() string {
+	return "pre_forum_threadhot"
+}

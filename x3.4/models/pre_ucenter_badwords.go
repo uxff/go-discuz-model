@@ -7,3 +7,7 @@ type PreUcenterBadwords struct {
 	Replacement string `xorm:"not null default '''' VARCHAR(255)"`
 	Findpattern string `xorm:"not null default '''' VARCHAR(255)"`
 }
+
+func (t *PreUcenterBadwords) TableName() string {
+	return "pre_ucenter_badwords"
+}

@@ -10,3 +10,7 @@ type PreCommonTaskvar struct {
 	Type        string `xorm:"not null default ''text'' VARCHAR(20)"`
 	Value       string `xorm:"not null TEXT"`
 }
+
+func (t *PreCommonTaskvar) TableName() string {
+	return "pre_common_taskvar"
+}

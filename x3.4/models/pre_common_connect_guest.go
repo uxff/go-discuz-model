@@ -7,3 +7,7 @@ type PreCommonConnectGuest struct {
 	Conqqnick    string `xorm:"not null default '''' CHAR(100)"`
 	Conuintoken  string `xorm:"not null default '''' CHAR(32)"`
 }
+
+func (t *PreCommonConnectGuest) TableName() string {
+	return "pre_common_connect_guest"
+}

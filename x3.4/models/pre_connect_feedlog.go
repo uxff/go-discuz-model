@@ -9,3 +9,7 @@ type PreConnectFeedlog struct {
 	Dateline      int `xorm:"not null default 0 INT(10)"`
 	Status        int `xorm:"not null default 1 TINYINT(1)"`
 }
+
+func (t *PreConnectFeedlog) TableName() string {
+	return "pre_connect_feedlog"
+}

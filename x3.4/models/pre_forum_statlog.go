@@ -10,3 +10,7 @@ type PreForumStatlog struct {
 	Type    int       `xorm:"not null default 0 SMALLINT(5)"`
 	Value   int       `xorm:"not null default 0 INT(10)"`
 }
+
+func (t *PreForumStatlog) TableName() string {
+	return "pre_forum_statlog"
+}

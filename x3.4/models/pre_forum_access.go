@@ -13,3 +13,7 @@ type PreForumAccess struct {
 	Adminuser       int `xorm:"not null default 0 MEDIUMINT(8)"`
 	Dateline        int `xorm:"not null default 0 index(listorder) INT(10)"`
 }
+
+func (t *PreForumAccess) TableName() string {
+	return "pre_forum_access"
+}
